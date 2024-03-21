@@ -145,9 +145,12 @@ int parentesisBalanceados(char *cadena)
       else if(top(pila) == NULL) return 0;
       else
       {
-          
+        char *arriba = top(pila);
+        if((*arriba) == '(' && caracter == ')'|| (*arriba) == '[' && caracter == ']'||     caracter == '}' && (*arriba) == '{') pop(pila);
       }
     }
+
+  if(top(pila) == NULL) return 1;
   
    return 0;
 }
