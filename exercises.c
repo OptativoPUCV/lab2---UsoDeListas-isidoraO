@@ -41,7 +41,8 @@ debes reservar memoria para cada elemento que agregues.
 Al finalizar retorna la lista creada.
 */
 
-List* crea_lista() {
+List* crea_lista() 
+{
    List* L = create_list();
     for(int i = 0; i < 10; i++)
       {
@@ -58,7 +59,8 @@ Ejercicio 2.
 Crea una función que reciba una lista de enteros (int*) y 
 retorne la suma de sus elementos.
 */
-int sumaLista(List *L) {
+int sumaLista(List *L) 
+{
   int suma = 0; 
   int* elemento = first(L);
 
@@ -102,7 +104,25 @@ El orden de ambas pilas se debe mantener.
 Puedes usar una pila auxiliar.
 */
 
-void copia_pila(Stack* P1, Stack* P2) {
+void copia_pila(Stack* P1, Stack* P2) 
+{
+  Stack *PA = create_stack();
+    
+  while(top(P1) != NULL)
+    {
+      void *elemento = top(P1);
+      push(PA, elemento);
+      pop(P1);
+    }
+
+
+  while(top(PA) != NULL)
+    {
+      void *elemento = top(PA);
+      push(P1, elemento);
+      push(P2, elemento);
+      pop(PA);
+    }
 }
 
 /*
@@ -112,7 +132,8 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 0 en caso contrario.
 */
 
-int parentesisBalanceados(char *cadena) {
+int parentesisBalanceados(char *cadena) 
+{
    return 0;
 }
 
