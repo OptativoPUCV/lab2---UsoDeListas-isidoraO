@@ -145,6 +145,7 @@ int parentesisBalanceados(char *cadena)
         if(top(pila) != NULL)
           {
             printf("%c ", cadena[i]);
+            printf("%c", *(char*)top(pila));
             if((cadena[i] == ']' && (*(int *)top(pila)) == '[') ||(cadena[i] == '}' && (*(int *)top(pila)) == '{')||(cadena[i] == ')' && (*(int *)top(pila)) == '(')) pop(pila);
             else return 0;
 
