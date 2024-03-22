@@ -82,3 +82,13 @@ Fri 22 Mar 2024 01:23:21 AM UTC:
  tests:  4|1
 total_score: 50/70
 b6b1cfd
+Fri 22 Mar 2024 01:25:21 AM UTC: 
+ exercises.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘parentesisBalanceados’:
+exercises.c:158:9: error: ‘else’ without a previous ‘if’
+  158 |         else
+      |         ^~~~
+Compilation failed
+0ec80e1
