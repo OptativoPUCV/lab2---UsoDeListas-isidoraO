@@ -89,11 +89,8 @@ void eliminaElementos(List*L, int elem)
   while(elemento != NULL)
     {
       if((*elemento) == elem)
-      {
         popCurrent(L);
-      }
       elemento = next(L);
-
     }
 }
 
@@ -114,8 +111,6 @@ void copia_pila(Stack* P1, Stack* P2)
       push(PA, elemento);
       pop(P1);
     }
-
-
   while(top(PA) != NULL)
     {
       void *elemento = top(PA);
