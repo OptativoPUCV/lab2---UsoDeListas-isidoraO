@@ -139,22 +139,12 @@ int parentesisBalanceados(char *cadena)
     {
       if(cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
         push(pila, &cadena[i]);
-      
       else
-      {
         if(top(pila) != NULL)
-          {
-            if((cadena[i] == ']' && (*(char *)top(pila)) == '[') ||(cadena[i] == '}' && (*(char *)top(pila)) == '{')||(cadena[i] == ')' && (*(char *)top(pila)) == '('))
-            {
-              printf("hello2");
-              pop(pila);
-            }
-            else return 0;
-
-            }                   
+            if((cadena[i] == ']' && (*(char *)top(pila)) == '[') ||(cadena[i] == '}' && (*(char *)top(pila)) == '{')||(cadena[i] == ')' && (*(char *)top(pila)) == '(')) pop(pila);  
+            else return 0;                      
         else
           return 0;
-      }
     }
 
   if(top(pila) == NULL) return 1;
