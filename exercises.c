@@ -140,11 +140,6 @@ int parentesisBalanceados(char *cadena)
       if(cadena[i] == '(' || cadena[i] == '[' || cadena[i] == '{')
       {
         push(pila, &cadena[i]);
-        while(top(pila) != NULL)
-          {
-            printf("%c", *(char*)top(pila));
-            pop(pila);
-          }
       }
       else{
         if(top(pila) != NULL)
